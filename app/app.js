@@ -28,7 +28,7 @@ if (Meteor.isClient) {
         }, '1');
     },
     h: function (n, s) {
-      if (n==="1"||n==="2"||n==="2"||n==="2"||n==="2"||n==="2") {
+      if (n==="1"||n==="2"||n==="3"||n==="4"||n==="5"||n==="6") {
         return "<h"+n+">"+s+"</h"+n+">";
       } else {
         console.error(n, "must be a number between 1 and 6");
