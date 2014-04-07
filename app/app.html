@@ -1,0 +1,34 @@
+<head>
+  <title>Controll through Compositional URL</title>
+</head>
+
+<body>
+  {{> result }}
+</body>
+
+<template name="result">
+  <h3>result:</h3>
+  <hr>
+  {{{ thisResult }}}
+  <hr>
+  <p>
+    The URL of this page follows some rudimentary function and argument
+    application logic. There are three functions this url can
+    compose. add, mult and h. add and mult take any number of numbers
+    and either add or multiply them together while h takes a number
+    from 1 to 6 and a result then wraps the result in the identified
+    heading tag.<br>
+  </p>
+  <p>'/' represents right associativity</p>
+  <p>'.' seperates functions and arguments</p>
+  <a href="/add.1.1">/add.1.1</a><br>
+  <a href="/h.3/add.1.1">/h.3/add.1.1</a><br>
+  <a href="/h.1/mult.10/add.1.1">/h.1/mult.10/add.1.1</a><br>
+  <a href="/h.1/mult.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2/add.1.1">
+    /h.1/mult.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2/add.1.1</a>
+
+  <p>If you have questions or comments about this method of handling
+    url routing PLEASE get in touch with me (jesse@jessebmiller.com).
+    If there is interest I might put together a real open source
+    project</p>
+</template>
